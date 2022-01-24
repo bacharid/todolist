@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 header,
 form {
@@ -24,7 +24,7 @@ form {
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
   background: white;
 }
@@ -41,6 +41,22 @@ form button:hover {
   color: #575554da;
   background: white;
 }
+.errorMsg {
+  color: red;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 20vw;
+  min-height: 8vh;
+  text-align: center;
+  text-decoration: underline;
+  visibility: visible;
+  opacity: 1;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
 
 .todo-container {
   display: flex;
@@ -48,7 +64,7 @@ form button:hover {
   align-items: center;
 }
 .todo-list {
-  min-width: 30vw;
+  min-width: 20vw;
   list-style: none;
 }
 .todo {
@@ -94,6 +110,5 @@ form button:hover {
   pointer-events: none;
 }
 .done {
-  text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.3;
 }

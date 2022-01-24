@@ -2,6 +2,8 @@ const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
+const errorMsg = document.querySelector('.errorMsgContent');
+
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 
@@ -13,8 +15,10 @@ function addTodo(event) {
 
   const newTodo = document.createElement('li');
   if (todoInput.value === '') {
+    errorMsg.classList.toggle('hidden');
     return;
   } else {
+    errorMsg.classList.add('hidden');
     newTodo.innerText = todoInput.value;
   }
 
